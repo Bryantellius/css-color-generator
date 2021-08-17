@@ -1,0 +1,122 @@
+html,
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+pre {
+  background-color: darkslategrey;
+  color: #eee;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  overflow-x: scroll;
+  width: 100%;
+  text-align: center;
+}
+
+code {
+  width: 100%;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn-primary {
+  background-color: #0094c8;
+  color: #eee;
+}
+
+.panel {
+  position: relative;
+  padding: 1rem;
+  background-color: aliceblue;
+  width: 80%;
+}
+
+.panel::before {
+  background: rgba(0, 0, 0, 0.3);
+  content: "";
+
+  /* Position */
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translate(1rem, 1rem);
+
+  /* Size */
+  height: 100%;
+  width: 100%;
+
+  /* Display under the main content */
+  z-index: -1;
+}
+
+.ribbon-wrapper {
+  /* Displayed at the top left corner */
+  left: 0px;
+  position: absolute;
+  top: 0px;
+
+  /* Size */
+  height: 100px;
+  width: 100px;
+
+  /* Hide the part of its children which is displayed outside */
+  overflow: hidden;
+}
+
+.ribbon {
+  /* Position */
+  left: -64px;
+  position: absolute;
+  top: 32px;
+
+  /* Size */
+  height: 24px;
+  width: 206px;
+
+  /* Displayed diagonally */
+  transform: rotate(-45deg);
+
+  /* Background color */
+  background-color: rgba(0, 0, 0, 0.7);
+
+  /* Centerize the text content */
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .panel {
+    width: 50%;
+  }
+  html,
+  body {
+    font-size: 20px;
+  }
+}

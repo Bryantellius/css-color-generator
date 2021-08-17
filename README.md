@@ -1,1 +1,2 @@
-# css-color-generator
+# CSS Color Generator
+
